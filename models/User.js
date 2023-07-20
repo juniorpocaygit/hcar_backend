@@ -30,5 +30,17 @@ const User = db.define('user', {
         type: DataTypes.INTEGER,
         require: false
     },   
+    recovery_token: {
+        type: DataTypes.STRING,
+        require: false
+    },   
+    recovery_time: {
+        type: DataTypes.DATE,
+        require: false
+    },   
+    deletedAt: {
+        type: DataTypes.DATE,
+        require: false
+    },   
 })
 module.exports = User

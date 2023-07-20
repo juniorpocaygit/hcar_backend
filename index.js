@@ -30,9 +30,6 @@ app.use(express.static('public'))
 const UserRoutes = require('./routes/UserRoutes')
 app.use('/users', UserRoutes)
 
-
-
-
 conn
     //.sync({ force: true})
     .sync()

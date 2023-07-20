@@ -4,6 +4,11 @@ const db = require('../db/conn')
 const User = require('./User')
 
 const UserAddress = db.define('User_address', {
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        require: true
+    },
     address: {
         type: DataTypes.STRING,
         require: false
