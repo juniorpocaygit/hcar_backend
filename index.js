@@ -28,7 +28,9 @@ app.use(express.static('public'))
 
 //routes
 const UserRoutes = require('./routes/UserRoutes')
+const UserAddressRoutes = require('./routes/UserAddressRoutes')
 app.use('/users', UserRoutes)
+app.use('/address', UserAddressRoutes)
 
 conn
     //.sync({ force: true})
