@@ -1,8 +1,7 @@
 require('dotenv').config()
 const UserAddress = require('../models/UserAddress')
-const jwt = require('jsonwebtoken')
 
-const validations = require('../helpers/AddressValidations')
+const validations = require('../validations/AddressValidations')
 const getToken = require('../helpers/GetToken')
 const getUserByToken = require('../helpers/GetUserByToken')
 

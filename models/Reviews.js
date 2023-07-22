@@ -30,6 +30,11 @@ const Reviews = db.define('Reviews', {
         type: DataTypes.DECIMAL(6,3),
         require: false
     },
+    done: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
 })
 Reviews.belongsTo(Cars)
 Cars.hasMany(Reviews)

@@ -5,7 +5,7 @@ const Cars = require('./Cars')
 
 const Fuel = db.define('Fuel', {
     fuel: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         require: true
     },

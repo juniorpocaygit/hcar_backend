@@ -29,8 +29,23 @@ app.use(express.static('public'))
 //routes
 const UserRoutes = require('./routes/UserRoutes')
 const UserAddressRoutes = require('./routes/UserAddressRoutes')
+const CarsRoutes = require('./routes/CarsRoutes')
+const FuelRoutes = require('./routes/FuelRoutes')
+const MaintenancesRoutes = require('./routes/MaintenancesRoutes')
+const ReviewsRoutes = require('./routes/ReviewsRoutes')
+const AssistanceRoutes = require('./routes/AssistanceRoutes')
+const SafeRoutes = require('./routes/SafesRoutes')
+const TaxesRoutes = require('./routes/TaxesRoutes')
+
 app.use('/users', UserRoutes)
 app.use('/address', UserAddressRoutes)
+app.use('/cars', CarsRoutes)
+app.use('/fuel', FuelRoutes)
+app.use('/maintenances', MaintenancesRoutes)
+app.use('/reviews', ReviewsRoutes)
+app.use('/assistance', AssistanceRoutes)
+app.use('/safe', SafeRoutes)
+app.use('/taxes', TaxesRoutes)
 
 conn
     //.sync({ force: true})

@@ -2,7 +2,7 @@ require('dotenv').config()
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 
-const validations = require('../helpers/UserValidations')
+const validations = require('../validations/UserValidations')
 const createUserToken = require('../helpers/CreateUserToken')
 const getToken = require('../helpers/GetToken')
 const getUserByToken = require('../helpers/GetUserByToken')
@@ -105,7 +105,7 @@ module.exports = class UserController{
     }
 
     static async editUser(req, res){
-      
+      console.log(req.body.name)
       //check if user exists
       const token = getToken(req)  
       const user = await getUserByToken(token)
